@@ -15,14 +15,11 @@ app.use('/', (req, res, next) => {
     next();
 });
 
+app.set('view engine', 'ejs');
+
 // This function sends information to the server and route assignation (HTML).
 app.get('/', (req, res) => {
-    res.send(`<!DOCTYPE html>
-    <head>
-    <link rel="stylesheet" href="assets/style.css">
-    </head>
-    <body>Hello World!</body>
-    </html>`);
+    res.render('index')
 });
 
 // This function sends information to the server and route assignation (JSON).
@@ -32,13 +29,7 @@ app.get('/api', (req, res) => {
 
 // This function sends information to the server and route assignation (HTML with REQUEST INFO (HTTP ROUTE)).
 app.get('/person/:id', (req, res) => {
-    res.send(`<!DOCTYPE html>
-    <head>
-    <link rel="stylesheet" href="assets/style.css">
-    </head>
-    <body>Persona solicitada: ${req.params.id}
-    </body>
-    </html>`);
+    res.render('person', {ID: req.params.id});
 });
 
 // This function assigns the port that express will be using, port parameter was assigned in port variable.
