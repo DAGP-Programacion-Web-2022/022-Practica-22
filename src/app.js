@@ -15,9 +15,10 @@ app.use('/', (req, res, next) => {
     next();
 });
 
+// This function set ejs engine
 app.set('view engine', 'ejs');
 
-// This function sends information to the server and route assignation (HTML).
+// This function sends information to the server, route assignation and view (HTML).
 app.get('/', (req, res) => {
     res.render('index')
 });
@@ -27,7 +28,7 @@ app.get('/api', (req, res) => {
     res.json({ firstname: 'John', lastname: 'Doe'});
 });
 
-// This function sends information to the server and route assignation (HTML with REQUEST INFO (HTTP ROUTE)).
+// This function sends information to the server and route assignation (HTML with REQUEST INFO AND VIEW (HTTP ROUTE)).
 app.get('/person/:id', (req, res) => {
     res.render('person', {ID: req.params.id});
 });
