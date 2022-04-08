@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="assets/style.css" type="text/css">
 </head>
 <body>
-    <h1>Hello World</h1>  
+    <% if(ID % 2 == 0){ %>
+        <% for(var i = 0; i < ID*2; i++) {%>
+            <li>ES PAR</li>
+          <% } %>
+      <% } else{ %>  
+        <% for(var i = 0; i < ID; i++) {%>
+            <li>ES IMPAR</li>
+          <% } %>
+     <% } %>
 </body>
 </html>
