@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 
 // This function sends information to the server, route assignation and view (HTML).
 app.get('/', (req, res) => {
-    res.render('')
+    res.render('default')
 });
 
 // This function sends information to the server and route assignation (HTML with REQUEST INFO AND VIEW (HTTP ROUTE)).
