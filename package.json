@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DAGP-Programacion-Web-2022/009-Practica-9.git"
+    "url": "git+https://github.com/DAGP-Programacion-Web-2022/014-Practica-14"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DAGP-Programacion-Web-2022/009-Practica-9/issues"
+    "url": "https://github.com/DAGP-Programacion-Web-2022/014-Practica-14/issues"
   },
-  "homepage": "https://github.com/DAGP-Programacion-Web-2022/009-Practica-9#readme",
+  "homepage": "https://github.com/DAGP-Programacion-Web-2022/014-Practica-14#readme",
   "dependencies": {
     "ejs": "^3.1.6",
     "express": "^4.17.3"

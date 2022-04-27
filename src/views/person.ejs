@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person.js</title>
+    <link rel="stylesheet" href="assets/style.css" type="text/css">
+</head>
+<body>
+
+    <!-- <h2>Quert String value: <%= Qstr %></h2> -->
+
+
+    <% switch(M) {
+        case 'Hola' : %>
+        <h1>Person: <%= ID %></h1>
+        <h2>Mensaje: <%= M %></h2>
+        <h2>Repeticiones: <%= T %></h2>
+        <% for(var i = 0; i < T; i++) {%>
+            <li><%= M %> <%= ID %></li>
+          <% } %>
+        <% break;
+
+        case 'Adios' : %>
+        <h1>Person: <%= ID %></h1>
+        <h2>Mensaje: <%= M %></h2>
+        <h2>Repeticiones: <%= T %></h2>
+        <% for(var i = 0; i < T; i++) {%>
+            <li><%= M %> <%= ID %></li>
+          <% } %>
+        <% break;
+
+        case 'Bienvenido' : %>
+        <h1>Person: <%= ID %></h1>
+        <h2>Mensaje: <%= M %></h2>
+        <h2>Repeticiones: <%= T %></h2>
+        <% for(var i = 0; i < T; i++) {%>
+            <li><%= M %> <%= ID %></li>
+          <% } %>
+        <% break;
+
+        default : %>
+        <h1>El mensaje no es correcto, se admite Hola, Adios y Bienvenido</h1>
+        <% break;
+
+        }
+    %>
+
+</body>
+</html>
+
+
+<!-- <% if(M == "Hola" || M == "Adios" || M == "Bienvenido"){ %>
+        <h1>Person: <%= ID %></h1>
+        <h2>Mensaje: <%= M %></h2>
+        <h2>Repeticiones: <%= T %></h2>
+        <% for(var i = 0; i < T; i++) {%>
+            <li><%= M %> <%= ID %></li>
+          <% } %>
+      <% } else{ %>  
+            <h1>El mensaje no es correcto, se admite Hola, Adios y Bienvenido</h1>
+     <% } %> -->
