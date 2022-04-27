@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 
+// This function sends information to the server, route assignation and view (HTML) with Parameters.
 app.get('/person/:id', (req, res) => {
     res.render('person', {ID: req.params.id, Qstr: req.query.qrst, M: req.query.message, T: req.query.times});
 });
