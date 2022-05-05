@@ -10,22 +10,31 @@ let port = process.env.PORT || 3000;
 app.use('/assets', express.static('./public'));
 
 // This function creates a debug log in console of any page that is requested.
-app.use('/', (req, res, next) => {
-    console.log(`Request Url ${req.url}`);
-    next();
-});
+app.use(express.urlencoded({ extended: false}));
 
 // This function set ejs engine
 app.set('view engine', 'ejs');
 
 // This function sends information to the server, route assignation and view (HTML).
-app.get('/', (req, res) => {
+app.get('/student', (req, res) => {
     res.render('index')
 });
 
-// This function sends information to the server, route assignation and view (HTML) with Parameters.
-app.get('/person/:id', (req, res) => {
-    res.render('person', {ID: req.params.id, Qstr: req.query.qrst, M: req.query.message, T: req.query.times});
+app.post('/student', (req, res) => {
+
+    if (req.body.fname == null || req.body.fname == "") {
+        req.body.fname = "SIN NOMBRE"
+    }
+
+    if (req.body.lname == null || req.body.lname == "") {
+        req.body.lname = "SIN APELLIDO"
+    }
+
+    res.send(`First Name es: ${req.body.fname}<br> Last Name es: ${req.body.lname}`);
+});
+
+app.get('/', (req, res) => {
+    res.redirect('./student');
 });
 
 // This function assigns the port that express will be using, port parameter was assigned in port variable.
@@ -35,9 +44,7 @@ app.listen(port);
 
 // LEGACY CODE
 
-// This function sends information to the server and route assignation (HTML with REQUEST INFO AND VIEW (HTTP ROUTE)).
-// app.get('/:id', (req, res) => {
-
-//     res.render('index', {ID: req.params.id});
-
+// // This function sends information to the server, route assignation and view (HTML) with Parameters.
+// app.get('/person/:id', (req, res) => {
+//     res.render('person', {ID: req.params.id, Qstr: req.query.qrst, M: req.query.message, T: req.query.times});
 // });
