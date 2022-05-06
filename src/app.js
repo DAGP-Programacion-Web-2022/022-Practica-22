@@ -20,19 +20,23 @@ app.get('/student', (req, res) => {
     res.render('index')
 });
 
+// This function returns information to the web client, route assignation and view (HTML).
 app.post('/student', (req, res) => {
 
+    // This validation identifies if Text-Box is null or without text.
     if (req.body.fname == null || req.body.fname == "") {
         req.body.fname = "SIN NOMBRE"
     }
-
+    // This validation identifies if Text-Box is null or without text.
     if (req.body.lname == null || req.body.lname == "") {
         req.body.lname = "SIN APELLIDO"
     }
 
+    // This function sends the information filtered.
     res.send(`First Name es: ${req.body.fname}<br> Last Name es: ${req.body.lname}`);
 });
 
+// This functions redirect from main page to student page.
 app.get('/', (req, res) => {
     res.redirect('./student');
 });
