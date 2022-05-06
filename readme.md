@@ -10,23 +10,22 @@
 
 
 
-## Práctica #14: Query String
+## Práctica #14-a: Peticiones POST
 
 **Instrucciones:**
 
-- En tu directorio de trabajo crea el directorio practica_12.
-- Cambiate al directorio “practica_12” e inicializa NPM (npm init -y).
+- En tu directorio de trabajo crea el directorio practica_14.
+- Cambiate al directorio “practica_13” e inicializa NPM (npm init -y).
 - Instala el paquete “express” desde la línea de comando.
 - Instala el paquete “ejs” desde la línea de comando (npm i ejs).
 - Instala el paquete “nodemon” desde la línea de comando (npm i nodemon).
-- Crea un nuevo archivo en blanco que se llame server.js y copia en el contenido de server.js de practica_11.
-- Agrega la siguiente línea, para que nuestra “app” de “Express” utilice “EJS” como motor de vistas.
-- Ahora, crea un nuevo directorio llamado “views”. Ese es el nombre del directorio donde debemos guardar las vistas, y todas ellas DEBEN de tener la extensión “.ejs” en lugar de “.htm”.
-- Dentro del directorio “views” crea un nuevo archivo de nombre “person.ejs” que tenga la estructura básica de un documento HTML.
-- Regresa al archivo “server.js” y ubica la ruta.
-- Como podemos apreciar, tenemos acceso a los valores que se pasan en la llamada al método “.render” mediante los caracteres especiales <%=%>. La consideración más importante es la siguiente: debemos asegurarnos que los nombres de los valor que estamos renderizando COINCIDEN con los nombres de las llaves que definimos en el “route handler”.
--  Una vez que hemos terminado la edición de nuestro “route handler” y de nuestro archivo “person.ejs”, es momento de ir a la línea de comando y levantar nuestro servidor
--  Y nuestro server se “levanta”, abre  una la ventana de tu navegador y accede a  localhost:3000/
--  La última consideración de importancia es que los nombres de los parámetros que enviamos en el query string, COINCIDAN con los nombres que definimos en el “route handler”.
+- Crea un nuevo archivo en blanco que se llame server.js y copia en el contenido de server.js de practica_13. Tu archivo server js en el directorio practica_14.
+- Agrega la siguiente línea, para especificar indicar que vamos a “Parsear” peticiones con URLencoded payload (datos dentro del body).
+- Ahora, en el directorio “views”, crea una nueva vista llamada “index.ejs.
+- El archivo de nombre “index.ejs” tiene la estructura básica de un documento HTML.
+- Y después es necesario agregarle un pequeño formulario dentro de la etiqueta.
+- En los atributos “action” y “method” deben establecerse los valores correspondientes.
+- La ruta que responderá a este formulario es “/student” y el método HTTP es “POST”, por lo tanto, en nuestro server debemos tener una ruta “/student” por POST.
+- Ejecutar Nodemon Server.
 
 > Las Instrucciones y tareas generadas en esta organización pertenecen al maestro en cuestión. El código a resolver es perteneciente al alumno y propuesto por el profesor el cual se encuentra dentro de la carpeta "src" del repositorio actual.
