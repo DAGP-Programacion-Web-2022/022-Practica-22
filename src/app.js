@@ -36,6 +36,12 @@ app.post('/student', (req, res) => {
     res.send(`First Name es: ${req.body.fname}<br> Last Name es: ${req.body.lname}`);
 });
 
+app.post('/personjson', express.json({type: "*/*"}), (req, res) =>{
+    console.log("El objeto contiene", (req.body));
+    console.log("Nombre:", (req.body.firstname));
+    console.log("Apellido:", (req.body.lastname));
+});
+
 // This functions redirect from main page to student page.
 app.get('/', (req, res) => {
     res.redirect('./student');

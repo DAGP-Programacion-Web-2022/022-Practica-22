@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index.js</title>
     <link rel="stylesheet" href="assets/style.css" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </head>
 <body>
     <form action="/student" method="post">
@@ -15,5 +16,14 @@
         <input type="text" name="lname" id="lname"><br><br>
         <input type="submit" value="Submit">
     </form>
+    <script>
+        $.ajax({
+            type: "POST",
+            url: "/personjson",
+            data: JSON.stringify({ firstname: "Juan", lastname: "Parra" }),
+            dataType: "json",
+            contentType: "application/json"
+        })
+    </script>
 </body>
 </html>
