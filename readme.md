@@ -10,23 +10,28 @@
 
 
 
-## Práctica #18: Router y postman
+## Practica #19 : API Parte 1
 
 **Instrucciones:**
 
-- En tu directorio de trabajo crea el directorio practica_18.
-- Cambiate al directorio “practica_18” e inicializa NPM (npm init -y).
+- En tu directorio de trabajo crea el directorio practica_19.
+- Cambiate al directorio “practica_19” e inicializa NPM (npm init -y).
 - Instala el paquete “express” desde la línea de comando.
 - Instala el paquete “ejs” desde la línea de comando (npm i ejs).
 - Instala el paquete “nodemon” desde la línea de comando (npm i nodemon).
+- Instala el paquete “mongoose” desde la línea de comando (npm i mongoose).
 - Crea una carpeta llamada “public”.
-- Crea una carpeta llamada “src”.
+- Crea una carpeta llamada “models”.
+- Crea una carpeta llamada “views”.
+- Crea una carpeta llamada “routes”.
 - Al nivel de la raíz crea el archivo .gitignore en incluye la referencia a la carpeta “node_modules”.
-- Dentro de la carpeta “src”, crea un nuevo archivo en blanco que se llame server.js y una carpeta que se llame “routes”.
-- Dentro de la carpeta “routes” crea un nuevo documento en blanco que se llame “person.js”.
-- En el archivo “person.js” escribiremos nuestra primera ruta, para el método get, en este caso enviaremos solo un mensaje, para comprobar que el ruteo funciona correctamente, en prácticas posteriores lo conectaremos a la base de datos.
-- Ve a la línea de comando y “levanta” el servidor utilizando nodemon.
-- Ve al agente de postman y seleccionando el metodo “Get”, escribe la ruta a person.
-- Empuja tu código al repositorio y NO OLVIDES agregar el archivo .gitignore (conteniendo “node_modules”) debido a que para esta práctica se instalaron los paquetes: Express, EJS, mongoose y Nodemon.
+- A nivel de la raiz, crea un nuevo archivo en blanco que se llame server.js.
+- Dentro de la carpeta “routes” crea un nuevo documento en blanco que se llame “persons.js”.
+- Dentro de la carpeta “models” crea un nuevo documento en blanco que se llame “person.js".
+- Inyectar la dependencia de mongoose.
+- Instanciar un nuevo Schema de Mongoose, esta definición debe coincidir con la definición de la colección que tenemos en nuestra base de datos de MongoDB.
+- Exportar una instancia de un modelos de mongoose.
+- En la carpeta “routes” en el archivo “persons.js” escribiremos nuestra primera ruta, para el método get, en este caso vamos a recuperar todos los documentos contenidos en la colección “persons” y regresarlos al Web browser como un objeto JSON, este módulo, exporta un objeto especial de tipo “router” que contendrá todas las rutas asociadas al modelo “person”.
+- Deberás obtener la respuesta “has solicitado el listado de personas”.
 
 > Las Instrucciones y tareas generadas en esta organización pertenecen al maestro en cuestión. El código a resolver es perteneciente al alumno y propuesto por el profesor el cual se encuentra dentro de la carpeta "src" del repositorio actual.
