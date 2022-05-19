@@ -15,5 +15,20 @@ router.get('/persons', (req, res) => {
     });
 });
 
+// This function create and assign a route that points to a person site.
+router.get('/person', (req, res) => {
+    res.render("person");
+});
+
+router.post("/addPerson", (req, res) => {
+    const myPerson = new Person({
+        nombre: req.body.nombre,
+        edad: req.body.edad,
+        tipoSangre: req.body.tipoSangre,
+        nss: req.body.nss
+    });
+    myPerson.save();
+});
+
 // This function create and assign virtual directory that points to a static directory.
 module.exports = router;
