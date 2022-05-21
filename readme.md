@@ -14,8 +14,8 @@
 
 **Instrucciones:**
 
-- En tu directorio de trabajo crea el directorio practica_19.
-- Cambiate al directorio “practica_19” e inicializa NPM (npm init -y).
+- En tu directorio de trabajo crea el directorio practica_20.
+- Cambiate al directorio “practica_20” e inicializa NPM (npm init -y).
 - Instala el paquete “express” desde la línea de comando.
 - Instala el paquete “ejs” desde la línea de comando (npm i ejs).
 - Instala el paquete “nodemon” desde la línea de comando (npm i nodemon).
