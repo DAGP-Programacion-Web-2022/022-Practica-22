@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Personas</title>    
+</head>
+<body>
+    <br><h1 class="d-flex justify-content-center">Listado de Personas</h1><br>
+    <div class="d-flex justify-content-center padding-left">
+    <table class="table table-inverse table-striped">
+        <thead>
+          <tr>
+            <th>NSS</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Tipo Sangre</th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <% for(var i=0; i < persons.length; i++) { %>
+          <tr>
+            <td><%= persons[i].nss %></td>
+            <td><%= persons[i].nombre %></td>
+            <td><%= persons[i].edad %></td>
+            <td><%= persons[i].tipoSangre %></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+      </div>
+    <a class="d-flex justify-content-center btn btn-info" href="./">Volver</a>
+</body>
+</html>

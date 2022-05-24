@@ -10,7 +10,8 @@ router.get('/persons', (req, res) => {
         if (err) {
             return next(err);
         } else {
-            res.json(persons);
+            // res.json(persons);
+            res.render('persons',{'persons' : persons} );
         }
     });
 });
@@ -20,6 +21,11 @@ router.get('/person', (req, res) => {
     res.render("person");
 });
 
+router.get('/', (req, res) => {
+    res.render("index");
+});
+
+
 router.post("/addPerson", (req, res) => {
     const myPerson = new Person({
         nombre: req.body.nombre,
@@ -28,6 +34,8 @@ router.post("/addPerson", (req, res) => {
         nss: req.body.nss
     });
     myPerson.save();
+    
+    res.redirect("./persons");
 });
 
 // This function create and assign virtual directory that points to a static directory.
