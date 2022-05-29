@@ -21,6 +21,7 @@
           </tr>
         </thead>
       
+        <!-- Loop for establishing every row in DB -->
         <tbody>
           <% for(var i=0; i < persons.length; i++) { %>
           <tr>
@@ -28,11 +29,13 @@
             <td><%= persons[i].nombre %></td>
             <td><%= persons[i].edad %></td>
             <td><%= persons[i].tipoSangre %></td>
+            <td><a class="btn btn-warning" href="<%= `findById/${persons[i]._id}` %>">Editar</a></td>
+            <td><a class="btn btn-danger" href="<%= `./deletePerson/${persons[i]._id}` %>">Borrar</a></td>
           </tr>
           <% } %>
         </tbody>
       </table>
       </div>
-    <a class="d-flex justify-content-center btn btn-info" href="./">Volver</a>
+    <a class="d-flex justify-content-center btn btn-info" href="./"><b><- Volver</b></a>
 </body>
 </html>
